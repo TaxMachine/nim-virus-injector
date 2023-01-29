@@ -11,6 +11,7 @@ proc writeCodeToFile(file: string, code: string): void =
     file.close()
 
 when isMainModule:
+    discard execShellCmd("cls")
     if not dirExists("inject"):
         echo "\x1b[1minject folder not found, creating one..."
         createDir("inject")
